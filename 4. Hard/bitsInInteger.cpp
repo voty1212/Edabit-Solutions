@@ -7,7 +7,7 @@ representation of positive integer n */
 unsigned int countSetOnes(unsigned int n) 
 { 
 	unsigned int count = 0; 
-	while (n) { 
+	while (n!=0) { 
 		count += n & 1; 
 		n >>= 1; 
 	} 
@@ -17,10 +17,10 @@ unsigned int countSetOnes(unsigned int n)
 /* Program to test function countSetOnes */
 int main() 
 { 
-	int i;
-	cout<<"Enter the number";
-	cin>>i;
-	cout <<"Number of Ones in the binary repersentation of the given number is : "<<countSetOnes(i); 
+	int a;
+	cout<<"Enter the number to check";
+	cin>>a;
+	cout <<"Number of Ones in the binary repersentation of the given number is : "<<countSetOnes(a); 
 	return 0; 
 } 
 
