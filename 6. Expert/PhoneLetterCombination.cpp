@@ -18,12 +18,12 @@ vector<string> plc(const int num[], int n, const string table[])
 	} 
 	return list; 
 } 
-void letterCombinations(const int num[], int n) 
+void letterCombinations(const int num[], int a) 
 { 
 	string table[10] 
 		= { "", "", "abc", "def", "ghi", "jkl", 
 			"mno", "pqrs", "tuv", "wxyz" }; 
-	vector<string> list = plc(num, n, table); 
+	vector<string> list = plc(num, a, table); 
 	for (auto word : list) 
 		cout << word << " "; 
 
@@ -32,7 +32,7 @@ void letterCombinations(const int num[], int n)
 int main() 
 { 
 	int num[] = { 2, 3, 4 }; 
-	int n = sizeof(num) / sizeof(num[0]); 
+	int a = sizeof(num) / sizeof(num[0]); 
 	letterCombinations(num, n); 
 	return 0; 
 } 
